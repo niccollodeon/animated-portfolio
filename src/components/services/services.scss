@@ -1,0 +1,170 @@
+@import "../../app.scss";
+
+.services {
+  background: linear-gradient(180deg, #2b1055, #7597de);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        font-size: 85px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .box {
+      padding: 50px;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @include mobile {
+        border: none;
+      }
+      
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: whitesmoke;
+      }
+
+      // Circular progress container
+      .circular-progress {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        margin: 20px 0;
+
+        .skill-percent {
+          position: absolute;
+          font-size: 20px;
+          font-weight: bold;
+          color: white;
+        }
+      }
+
+      // Circular progress ring (SVG circle)
+      .progress-ring__circle {
+        transition: stroke-dashoffset 0.5s;
+        transform: rotate(90deg);
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+}
