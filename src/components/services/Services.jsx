@@ -85,6 +85,7 @@ const Services = () => {
                   cx="50"
                   cy="50"
                   strokeDasharray="251.2"
+                  strokeLinecap={"round"}
                   custom={skill.level}
                   variants={circleVariants}
                   initial="initial"
